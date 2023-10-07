@@ -1,6 +1,6 @@
 import React from "react"
 
-const Listado = ({ colaboradores }) => {
+const Listado = ({ colaboradores  }) => {
     return (
         <div>
             <h1>Listado de Colaboradores</h1>
@@ -36,4 +36,4 @@ const Listado = ({ colaboradores }) => {
     )
 }
 
-export default Listado
+export default Listado

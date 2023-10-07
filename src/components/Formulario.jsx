@@ -1,37 +1,37 @@
 import React, { useState } from "react";
 
+
 const Formulario = ({agregarNuevoColab}) =>{
     const [nuevoColab, setNuevoColab]=useState({
-        nombre:"",
-        correo:"",
-        edad:"",
-        cargo:"",
-        telefono:"",
+        nombre:'',
+        correo:'',
+        edad:'',
+        cargo:'',
+        telefono:'',
     })
-
     const {nombre,correo,edad,cargo,telefono}= nuevoColab;
+
+    const agregarColab = () =>{
+        agregarNuevoColab(nuevoColab)
+        setNuevoColab({
+            nombre:'',
+            correo:'',
+            edad:'',
+            cargo:'',
+            telefono:'',
+        })
+    }
+
 
     const actualizarForm =(e) =>{
         const {name,value} = e.target
         setNuevoColab({...nuevoColab, [name]:value})
     }
-    const agregarColab = () =>{
-        if (!nombre || !correo || !edad || !cargo || !telefono){
-            alert("por favor, no completa todos los campos")
-            return
-        }
-        agregarNuevoColab(nuevoColab)
-        setNuevoColab({
-            nombre:"",
-            correo:"",
-            edad:"",
-            cargo:"",
-            telefono:"",
-        })
-    }
+
     return(
         <div>
             <h1>Agrega un nuevo colaborador</h1>
+
             <form onSubmit={agregarColab} > 
                 <div>
                     <label htmlFor="nombre" >Nombre: </label>
