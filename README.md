@@ -1,5 +1,5 @@
 # Pull request de compañeros
-["Agregar Nombre"]("link de portafolio")
+[Santiago Ovalle](https://github.com/Sovalle93)
 
 # Forkee a: 
 [angello orrego](https://github.com/AngelloAbor/desafio_react3)
